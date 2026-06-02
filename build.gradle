@@ -1,0 +1,65 @@
+plugins {
+    alias(libs.plugins.agp.app)
+    alias(libs.plugins.kotlin)
+    alias(libs.plugins.kotlin.kapt)
+}
+
+android {
+    namespace 'de.simon.dankelmann.bluetoothlespam'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "de.simon.dankelmann.bluetoothlespam"
+        minSdk 26
+        targetSdk 34
+        versionCode 3
+        versionName "1.0.9"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            resValue "string", "app_name", "Bluetooth LE Spam"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            resValue "string", "app_name", "Bluetooth LE Spam Debug"
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation libs.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.google.material
+    implementation libs.android.constraintlayout
+    implementation libs.navigation.fragment.ktx
+    implementation libs.navigation.ui.ktx
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.airbnb.lottie
+    implementation libs.room.runtime
+    implementation libs.room.rxjava3
+    kapt libs.room.compiler
+    
+    // Additional dependencies from original toml if any missed
+    implementation libs.preference.ktx
+    implementation libs.kotlinx.coroutines
+    implementation libs.legacy.support
+}
