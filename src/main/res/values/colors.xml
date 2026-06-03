@@ -3,76 +3,77 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorPrimary">@color/blue_normal</color>
-    <color name="colorSecondary">#673AB7</color>
-    <color name="colorTertiary">#03DAC6</color>
-    <color name="background_color_card">#FFFFFF</color>
+    <!-- Deep Space/Cyber Palette -->
+    <color name="background_dark">#08080A</color>
+    <color name="surface_dark">#121216</color>
 
-    <color name="blue_normal">#2D5EED</color>
-    <color name="blue_dark">#1A3E99</color>
-    <color name="blue_light">#5C85FF</color>
-    <color name="blue_lighter">#ADC2FF</color>
-    <color name="blue_accent">#00FFFF</color>
+    <color name="colorPrimary">#00F5FF</color> <!-- Bright Neon Cyan -->
+    <color name="colorSecondary">#BF00FF</color> <!-- Neon Purple -->
+    <color name="colorTertiary">#4D4DFF</color> <!-- Electric Blue -->
+    <color name="background_color_card">#121216</color>
 
-    <!-- Neon Accents -->
-    <color name="neon_cyan">#00FFFF</color>
-    <color name="neon_purple">#BC13FE</color>
-    <color name="neon_blue">#2D5EED</color>
+    <color name="neon_cyan">#00F5FF</color>
+    <color name="neon_purple">#BF00FF</color>
+    <color name="neon_blue">#4D4DFF</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="neon_red">#FF3131</color>
 
-    <color name="green_normal">#00FF9F</color>
-    <color name="green_dark">#00A36C</color>
+    <color name="blue_normal">#4D4DFF</color>
+    <color name="blue_dark">#00008B</color>
+    <color name="blue_light">#8A2BE2</color>
+    <color name="blue_lighter">#E6E6FA</color>
+    <color name="blue_accent">#00F5FF</color>
 
-    <color name="grey_normal">#8E8E93</color>
+    <color name="green_normal">#39FF14</color>
+    <color name="green_dark">#006400</color>
 
-    <color name="color_accent_text">#ffffff</color>
+    <color name="grey_normal">#7F7F7F</color>
 
-    <color name="log_info">#00FFFF</color>
-    <color name="log_warning">#FFBC00</color>
-    <color name="log_error">#FF0055</color>
-    <color name="log_success">#00FF9F</color>
+    <color name="log_info">#00F5FF</color>
+    <color name="log_warning">#FFFF00</color>
+    <color name="log_error">#FF3131</color>
+    <color name="log_success">#39FF14</color>
 
-
-    <color name="permission_denied">#c50f1f</color>
-    <color name="permission_granted">#13a10e</color>
+    <color name="permission_denied">#FF3131</color>
+    <color name="permission_granted">#39FF14</color>
 
     <!-- Text Colors -->
-    <color name="text_color">#000000</color>
-    <color name="text_color_light">#ababab</color>
+    <color name="text_color">#E0E0E0</color>
+    <color name="text_color_light">#808080</color>
 
     <!-- ACTIONBAR -->
-    <color name="background_color_action_bar">#FFFFFF</color>
-    <color name="foreground_color_action_bar">#2d5eed</color>
+    <color name="background_color_action_bar">#08080A</color>
+    <color name="foreground_color_action_bar">#00F5FF</color>
 
     <!-- CARDVIEW -->
     <color name="text_color_card_view_accent">#FFFFFF</color>
-    <color name="text_color_card_view_accent_light">#D1D1D1</color>
+    <color name="text_color_card_view_accent_light">#B0B0B0</color>
 
     <!-- CARDVIEW ALTERNATIVE -->
-    <color name="text_color_card_view_alternative">#000000</color>
-    <color name="text_color_card_view_alternative_light">#373737</color>
-    <color name="tint_icon_card_view_alternative">#373737</color>
+    <color name="text_color_card_view_alternative">#FFFFFF</color>
+    <color name="text_color_card_view_alternative_light">#B0B0B0</color>
+    <color name="tint_icon_card_view_alternative">#FFFFFF</color>
 
     <!-- LOADING SPINNER -->
-    <color name="background_color_loading_spinner">#ccffffff</color>
-    <color name="color_filter_loading_spinner">@color/blue_normal</color>
-    <color name="color_loading_spinner_message">@color/black</color>
+    <color name="background_color_loading_spinner">#CC08080A</color>
+    <color name="color_filter_loading_spinner">#00F5FF</color>
+    <color name="color_loading_spinner_message">#FFFFFF</color>
 
     <!-- ROUNDED BUTTON -->
-    <color name="background_color_rounded_button">@color/blue_normal</color>
+    <color name="background_color_rounded_button">#4D4DFF</color>
     <color name="foreground_color_rounded_button">@color/white</color>
 
     <!-- ICON TINT -->
-    <color name="tint_icon">@color/black</color>
-    <color name="tint_icon_light">@color/grey_normal</color>
-    <color name="tint_icon_accent">@color/blue_normal</color>
+    <color name="tint_icon">#808080</color>
+    <color name="tint_icon_light">#606060</color>
+    <color name="tint_icon_accent">#00F5FF</color>
 
     <!-- NOTIFICATION -->
-    <color name="tint_target_icon">@color/text_color_light</color>
-    <color name="color_title">@color/text_color</color>
-    <color name="color_subtitle">@color/text_color_light</color>
-    <color name="tint_button_active">@color/text_color</color>
-    <color name="tint_button_inactive">@color/text_color_light</color>
+    <color name="tint_target_icon">#808080</color>
+    <color name="color_title">#E0E0E0</color>
+    <color name="color_subtitle">#808080</color>
+
     <!-- BACKGROUND -->
-    <color name="background_color">@color/white</color>
+    <color name="background_color">#08080A</color>
 
 </resources>

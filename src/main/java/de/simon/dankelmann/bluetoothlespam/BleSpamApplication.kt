@@ -28,8 +28,8 @@ class BleSpamApplication : Application() {
 
         super.onCreate()
 
-        // Apply Dynamic Colors
-        DynamicColors.applyToActivitiesIfAvailable(this)
+        // Apply Dynamic Colors (Uncomment to enable Material You)
+        // DynamicColors.applyToActivitiesIfAvailable(this)
 
         setupAdvertisementService()
         scanService = BluetoothLeScanService(this)

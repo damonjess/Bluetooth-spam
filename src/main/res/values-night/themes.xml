@@ -28,4 +28,10 @@
         <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
     </style>
 
+    <!-- Fix: Inherit from Theme.BluetoothLESpam -->
+    <style name="Theme.BluetoothLESpam.NoActionBar" parent="Theme.BluetoothLESpam">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>

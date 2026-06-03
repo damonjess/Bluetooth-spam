@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
     android:clipToPadding="false"
+    android:paddingBottom="100dp"
     tools:context=".ui.start.StartFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="@dimen/activity_vertical_margin">
+        android:padding="20dp">
 
         <include
             android:id="@+id/info_card"
@@ -21,167 +23,189 @@
             android:id="@+id/startFragmentRequirementsHeadline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="24dp"
-            android:paddingBottom="8dp"
-            android:text="Requirements"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="32dp"
+            android:text="SYSTEM STATUS"
+            android:textColor="@color/neon_cyan"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
 
-        <TextView
-            android:id="@+id/startFragmentRequirementsTextView"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="4dp"
-            android:text="@string/startfragment_requirements_checking"
-            android:textColor="?attr/colorOnSurface" />
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="#121216"
+            app:cardCornerRadius="16dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#303040">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/startFragmentRequirementsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/startfragment_requirements_checking"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/startFragmentMissingRequirementsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="---"
+                    android:textColor="@color/neon_purple"
+                    android:textStyle="italic"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CARDS CONTAINER -->
         <TextView
-            android:id="@+id/startFragmentMissingRequirementsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="12dp"
-            android:text="---"
-            android:textColor="?attr/colorTertiary"
-            android:textStyle="italic" />
+            android:layout_marginTop="24dp"
+            android:text="CONTROLS"
+            android:textColor="@color/neon_cyan"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1" />
 
-        <!-- PERMISSIONS CARD -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/startFragmentPermissionsCardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardElevation="0dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="?attr/colorOutline">
+            android:layout_marginTop="8dp"
+            app:cardElevation="4dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.LargeComponent">
 
             <LinearLayout
                 android:id="@+id/startFragmentPermissionCardViewContentWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="72dp"
+                android:layout_height="80dp"
                 android:background="@drawable/gradient_cardview_requirements"
-                android:orientation="horizontal">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="64dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/key_24"
-                        app:tint="@color/white" />
-                </LinearLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/key_24"
+                    app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:text="Permissions"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
-            </LinearLayout>
 
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_info"
+                    app:tint="#80FFFFFF" />
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- BLUETOOTH CARD -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/start_fragment_bluetooth_cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardElevation="0dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="?attr/colorOutline">
+            app:cardElevation="4dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.LargeComponent">
 
             <LinearLayout
                 android:id="@+id/startFragmentBluetoothCardViewContentWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="72dp"
+                android:layout_height="80dp"
                 android:background="@drawable/gradient_cardview_requirements"
-                android:orientation="horizontal">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="64dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:src="@drawable/bluetooth"
-                        app:tint="@color/white" />
-                </LinearLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/bluetooth"
+                    app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
-                    android:text="Bluetooth Adapter"
+                    android:text="Bluetooth"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
-            </LinearLayout>
 
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/bluetooth_searching"
+                    app:tint="#80FFFFFF" />
+            </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- DATABASE CARD -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/start_fragment_database_cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardElevation="0dp"
-            app:strokeWidth="1dp"
-            app:strokeColor="?attr/colorOutline">
+            app:cardElevation="4dp"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.App.LargeComponent">
 
             <LinearLayout
                 android:id="@+id/startFragmentDatabaseCardViewContentWrapper"
                 android:layout_width="match_parent"
-                android:layout_height="72dp"
+                android:layout_height="80dp"
                 android:background="@drawable/gradient_cardview_requirements"
-                android:orientation="horizontal">
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
 
-                <LinearLayout
-                    android:layout_width="64dp"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
+                <FrameLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp">
                     <ImageView
                         android:id="@+id/startFragmentDatabaseCardIcon"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:src="@drawable/data_array"
                         app:tint="@color/white" />
 
                     <com.airbnb.lottie.LottieAnimationView
                         android:id="@+id/startFragmentDatabaseCardSeedingAnimation"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
-                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:visibility="gone"
                         app:lottie_autoPlay="true"
                         app:lottie_colorFilter="@color/white"
                         app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/sandglass"
-                        app:lottie_repeatMode="restart" />
-                </LinearLayout>
+                        app:lottie_rawRes="@raw/sandglass" />
+                </FrameLayout>
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
                     android:layout_weight="1"
                     android:text="Database"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
-
         </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
