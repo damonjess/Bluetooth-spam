@@ -3,23 +3,33 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="blue_normal">#3F51B5</color>
-    <color name="blue_dark">#303F9F</color>
-    <color name="blue_light">#7986CB</color>
-    <color name="blue_lighter">#C5CAE9</color>
-    <color name="blue_accent">#FF4081</color>
+    <color name="colorPrimary">@color/blue_normal</color>
+    <color name="colorSecondary">#673AB7</color>
+    <color name="colorTertiary">#03DAC6</color>
+    <color name="background_color_card">#FFFFFF</color>
 
-    <color name="green_normal">#4CAF50</color>
-    <color name="green_dark">#388E3C</color>
+    <color name="blue_normal">#2D5EED</color>
+    <color name="blue_dark">#1A3E99</color>
+    <color name="blue_light">#5C85FF</color>
+    <color name="blue_lighter">#ADC2FF</color>
+    <color name="blue_accent">#00FFFF</color>
 
-    <color name="grey_normal">#757575</color>
+    <!-- Neon Accents -->
+    <color name="neon_cyan">#00FFFF</color>
+    <color name="neon_purple">#BC13FE</color>
+    <color name="neon_blue">#2D5EED</color>
+
+    <color name="green_normal">#00FF9F</color>
+    <color name="green_dark">#00A36C</color>
+
+    <color name="grey_normal">#8E8E93</color>
 
     <color name="color_accent_text">#ffffff</color>
 
-    <color name="log_info">#2196F3</color>
-    <color name="log_warning">#FFC107</color>
-    <color name="log_error">#F44336</color>
-    <color name="log_success">#4CAF50</color>
+    <color name="log_info">#00FFFF</color>
+    <color name="log_warning">#FFBC00</color>
+    <color name="log_error">#FF0055</color>
+    <color name="log_success">#00FF9F</color>
 
 
     <color name="permission_denied">#c50f1f</color>

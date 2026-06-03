@@ -1,22 +1,46 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="Theme.BluetoothLESpam" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/blue_normal</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">#673AB7</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/white</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/blue_dark</item>
-        <item name="android:navigationBarColor">@color/white</item>
-        <!-- Customize your theme here. -->
-        <item name="seekbarBackground">@color/grey_normal</item>
-        <item name="seekbarProgress">?attr/colorPrimary</item>
+        <item name="colorTertiary">@color/colorTertiary</item>
+        <item name="colorOnTertiary">@color/white</item>
+
+        <item name="android:colorBackground">@color/background_color</item>
+        <item name="colorSurface">@color/background_color_card</item>
+        <item name="colorOnSurface">@color/text_color</item>
+        <item name="colorOutline">@color/grey_normal</item>
+
+        <!-- Status bar and Navigation bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Rounded Corners -->
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.App.LargeComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+
+        <!-- Material Components -->
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
     </style>
 
+    <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerSize">20dp</item>
+    </style>
 
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="Widget.App.CardView" parent="Widget.Material3.CardView.Filled">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="cardElevation">2dp</item>
+    </style>
 
     <style name="Theme.BluetoothLESpam.NoActionBar">
         <item name="windowActionBar">false</item>

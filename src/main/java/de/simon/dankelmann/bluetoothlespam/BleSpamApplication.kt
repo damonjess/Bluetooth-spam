@@ -1,6 +1,7 @@
 package de.simon.dankelmann.bluetoothlespam
 
 import android.app.Application
+import com.google.android.material.color.DynamicColors
 import de.simon.dankelmann.bluetoothlespam.Handlers.AdvertisementSetQueueHandler
 import de.simon.dankelmann.bluetoothlespam.Helpers.BluetoothHelpers
 import de.simon.dankelmann.bluetoothlespam.Helpers.ThemeManager
@@ -26,6 +27,9 @@ class BleSpamApplication : Application() {
         ThemeManager.getInstance().applyTheme(this)
 
         super.onCreate()
+
+        // Apply Dynamic Colors
+        DynamicColors.applyToActivitiesIfAvailable(this)
 
         setupAdvertisementService()
         scanService = BluetoothLeScanService(this)

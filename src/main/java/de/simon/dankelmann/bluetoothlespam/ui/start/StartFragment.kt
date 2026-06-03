@@ -13,7 +13,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.cardview.widget.CardView
+import com.google.android.material.card.MaterialCardView
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -158,7 +158,7 @@ class StartFragment : Fragment() {
         }
 
         // Permissions CardView
-        val startFragmentPermissionCardView: CardView = binding.startFragmentPermissionsCardview
+        val startFragmentPermissionCardView: MaterialCardView = binding.startFragmentPermissionsCardview
         startFragmentPermissionCardView.setOnClickListener {
             checkRequiredPermissions(context)
         }
@@ -179,7 +179,7 @@ class StartFragment : Fragment() {
         }
 
         // Bluetooth CardView
-        val startFragmentBluetoothCardView: CardView = binding.startFragmentBluetoothCardview
+        val startFragmentBluetoothCardView: MaterialCardView = binding.startFragmentBluetoothCardview
         startFragmentBluetoothCardView.setOnClickListener {
             checkBluetoothAdapter(true)
         }
@@ -195,7 +195,7 @@ class StartFragment : Fragment() {
         }
 
         // Database CardView
-        val startFragmentDatabaseCardview: CardView = binding.startFragmentDatabaseCardview
+        val startFragmentDatabaseCardview: MaterialCardView = binding.startFragmentDatabaseCardview
         startFragmentDatabaseCardview.setOnClickListener {
             checkDatabase()
         }

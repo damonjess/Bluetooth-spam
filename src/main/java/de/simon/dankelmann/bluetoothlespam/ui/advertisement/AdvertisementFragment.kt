@@ -234,18 +234,14 @@ class AdvertisementFragment : Fragment(), IAdvertisementServiceCallback, IAdvert
         val advertisingAnimation = binding.advertisementFragmentAdvertisingAnimation
         viewModel.isAdvertising.observe(viewLifecycleOwner) { isAdvertising ->
             if (isAdvertising) {
-                playButton.setImageDrawable(
-                    ResourcesCompat.getDrawable(
+                playButton.icon = ResourcesCompat.getDrawable(
                         resources, R.drawable.pause, context.theme
                     )
-                )
                 advertisingAnimation.playAnimation()
             } else {
-                playButton.setImageDrawable(
-                    ResourcesCompat.getDrawable(
+                playButton.icon = ResourcesCompat.getDrawable(
                         resources, R.drawable.play_arrow, context.theme
                     )
-                )
                 advertisingAnimation.cancelAnimation()
                 advertisingAnimation.frame = 0
             }
@@ -279,12 +275,12 @@ class AdvertisementFragment : Fragment(), IAdvertisementServiceCallback, IAdvert
             val colorInactive = resources.getColor(R.color.text_color_light, context.theme)
             val colorActive = resources.getColor(R.color.blue_normal, context.theme)
 
-            queueModeButtonLinear.setColorFilter(colorInactive)
-            queueModeButtonRandom.setColorFilter(colorInactive)
+            queueModeButtonLinear.setIconTint(android.content.res.ColorStateList.valueOf(colorInactive))
+            queueModeButtonRandom.setIconTint(android.content.res.ColorStateList.valueOf(colorInactive))
 
             when (mode) {
-                AdvertisementQueueMode.ADVERTISEMENT_QUEUE_MODE_LINEAR -> queueModeButtonLinear.setColorFilter(colorActive)
-                AdvertisementQueueMode.ADVERTISEMENT_QUEUE_MODE_RANDOM -> queueModeButtonRandom.setColorFilter(colorActive)
+                AdvertisementQueueMode.ADVERTISEMENT_QUEUE_MODE_LINEAR -> queueModeButtonLinear.setIconTint(android.content.res.ColorStateList.valueOf(colorActive))
+                AdvertisementQueueMode.ADVERTISEMENT_QUEUE_MODE_RANDOM -> queueModeButtonRandom.setIconTint(android.content.res.ColorStateList.valueOf(colorActive))
             }
         }
     }

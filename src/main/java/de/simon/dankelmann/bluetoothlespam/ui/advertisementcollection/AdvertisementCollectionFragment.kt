@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
+import com.google.android.material.card.MaterialCardView
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -145,7 +145,7 @@ class AdvertisementCollectionFragment : Fragment() {
         }
 
         // Hookup Events
-        var cardView: CardView =
+        var cardView: MaterialCardView =
             advertisementSetCollectionView.findViewById(R.id.listItemAdvertisementSetCollectionStartCardview)
         cardView.setOnClickListener { view ->
             when (advertisementTarget) {

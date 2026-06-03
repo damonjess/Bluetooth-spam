@@ -98,14 +98,10 @@ class SpamDetectorFragment : IBluetoothLeScanCallback, Fragment() {
         // Observers
         viewModel.isDetecting.observe(viewLifecycleOwner) { isDetecting ->
             if (isDetecting) {
-                toggleButton.setImageDrawable(
-                    ResourcesCompat.getDrawable(resources, R.drawable.pause, context.theme)
-                )
+                toggleButton.icon = ResourcesCompat.getDrawable(resources, R.drawable.pause, context.theme)
                 detectionAnimation.playAnimation()
             } else {
-                toggleButton.setImageDrawable(
-                    ResourcesCompat.getDrawable(resources, R.drawable.play_arrow, context.theme)
-                )
+                toggleButton.icon = ResourcesCompat.getDrawable(resources, R.drawable.play_arrow, context.theme)
                 detectionAnimation.cancelAnimation()
                 detectionAnimation.frame = 0
             }
